@@ -16,10 +16,10 @@ A **pure-Python**, **zero-dependency** CLI tool to inspect, list, search, and ex
 ## Installation
 
 ```bash
-pip install git+https://github.com/songshiyu777/asar-tool.git
+pip install asar-tool
 ```
 
-Or clone and install locally:
+Or from source:
 
 ```bash
 git clone https://github.com/songshiyu777/asar-tool.git
