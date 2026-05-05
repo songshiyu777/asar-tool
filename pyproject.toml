@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asar-tool"
+version = "0.1.0"
+description = "纯 Python 零依赖 Electron ASAR 归档解包工具 | Pure-Python CLI tool for Electron ASAR archives"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Song Shiyu (宋诗雨)"},
+]
+keywords = ["asar", "electron", "archive", "extract", "cli", "Electron解包", "ASAR提取", "归档工具", "前端逆向", "asar解析"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+    "Operating System :: OS Independent",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[project.scripts]
+asar-tool = "asar_tool.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/songshiyu777/asar-tool"
+Repository = "https://github.com/songshiyu777/asar-tool"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
